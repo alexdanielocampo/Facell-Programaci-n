@@ -1,0 +1,68 @@
+/* Estilos propios. Bootstrap hace casi todo; aquí solo ajustamos colores. */
+
+body {
+    font-family: 'Source Serif 4', serif;
+}
+
+/* ----- Menú lateral ----- */
+.sidebar {
+    background-color: #EAE4FB;
+    min-height: 100vh;
+}
+
+.sidebar .nav-link {
+    color: #212529;
+    font-size: 1.2rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+}
+
+/* Opción del menú donde estamos parados */
+.sidebar .nav-link.active {
+    background-color: #ffffff;
+    color: #6c757d;
+    border-color: #8B6CF0;
+}
+
+/* ----- Login ----- */
+.login-card {
+    background-color: #CFE1FF;
+    border-radius: 40px;
+    max-width: 520px;
+}
+
+/* ----- Cuadro de color con icono (encabezados y panel) ----- */
+.icono-modulo {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.fondo-naranja { background-color: #FFE3D0; }
+.fondo-morado  { background-color: #E1D2FB; }
+.fondo-azul    { background-color: #CFE1FF; }
+.fondo-verde   { background-color: #CFE8DD; }
+
+/* ----- Tarjetas grises claras ----- */
+.tarjeta {
+    background-color: #F8F9FA;
+    border-radius: 20px;
+}
+
+/* ----- Estados de las tablas ----- */
+.estado {
+    display: block;
+    padding: 6px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.estado-verde    { background-color: #72DDBE; }
+.estado-amarillo { background-color: #FFD966; }
+.estado-rojo     { background-color: #F0AAB1; }

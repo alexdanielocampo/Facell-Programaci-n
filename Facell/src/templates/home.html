@@ -1,0 +1,71 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h1 class="display-5 fw-bold">PANEL DE MÓDULOS</h1>
+<p class="fs-4">Selecciona el módulo que deseas gestionar</p>
+
+<!-- 1 columna en celular, 2 columnas en pantallas medianas -->
+<div class="row row-cols-1 row-cols-md-2 g-4 mt-1">
+
+    <!-- Tarjeta Productos -->
+    <div class="col">
+        <a href="{{ url_for('products.list_products') }}" class="text-decoration-none text-dark">
+            <div class="tarjeta p-4 h-100">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div class="icono-modulo fondo-naranja"><i class="bi bi-cart3"></i></div>
+                    <h3 class="fw-bold mb-0">Productos</h3>
+                </div>
+                <p class="fs-5 mb-2">Inventario, precios y stock</p>
+                <div class="fs-3 fw-bold">{{ total_productos }}</div>
+                <div>Productos activos</div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Tarjeta Proveedores -->
+    <div class="col">
+        <a href="{{ url_for('suppliers.list_suppliers') }}" class="text-decoration-none text-dark">
+            <div class="tarjeta p-4 h-100">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div class="icono-modulo fondo-morado"><i class="bi bi-truck"></i></div>
+                    <h3 class="fw-bold mb-0">Proveedores</h3>
+                </div>
+                <p class="fs-5 mb-2">Información de proveedores</p>
+                <div class="fs-3 fw-bold">{{ total_proveedores }}</div>
+                <div>Proveedores registrados</div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Tarjeta Clientes -->
+    <div class="col">
+        <a href="{{ url_for('clients.list_clients') }}" class="text-decoration-none text-dark">
+            <div class="tarjeta p-4 h-100">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div class="icono-modulo fondo-azul"><i class="bi bi-person-plus"></i></div>
+                    <h3 class="fw-bold mb-0">Clientes</h3>
+                </div>
+                <p class="fs-5 mb-2">Historial de compra</p>
+                <div class="fs-3 fw-bold">{{ total_clientes }}</div>
+                <div>Clientes registrados</div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Tarjeta Ventas -->
+    <div class="col">
+        <a href="{{ url_for('sales.list_sales') }}" class="text-decoration-none text-dark">
+            <div class="tarjeta p-4 h-100">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div class="icono-modulo fondo-verde"><i class="bi bi-graph-up"></i></div>
+                    <h3 class="fw-bold mb-0">Ventas</h3>
+                </div>
+                <p class="fs-5 mb-2">Informe de ventas o facturas</p>
+                <div class="fs-3 fw-bold">{{ ventas_hoy }}</div>
+                <div>Ventas realizadas el día de hoy</div>
+            </div>
+        </a>
+    </div>
+
+</div>
+{% endblock %}
